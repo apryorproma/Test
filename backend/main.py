@@ -53,8 +53,9 @@ def get_demo_results():
 # ── Serve frontend ──────────────────────────────────────────────
 
 if FRONTEND_DIR.exists():
-    app.mount("/static", StaticFiles(directory=str(FRONTEND_DIR)), name="static")
 
     @app.get("/")
     def serve_index():
         return FileResponse(str(FRONTEND_DIR / "index.html"))
+
+    app.mount("/static", StaticFiles(directory=str(FRONTEND_DIR)), name="static")
