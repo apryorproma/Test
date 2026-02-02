@@ -1,0 +1,338 @@
+{
+  "job_roles": [
+    {
+      "title": "Customer Support Manager",
+      "department": "Customer Success",
+      "description": "Manages customer inquiries, escalations, and support workflows across multiple channels.",
+      "workflows": [
+        {
+          "name": "Ticket Resolution",
+          "description": "End-to-end process of handling customer support tickets",
+          "tasks": [
+            {
+              "name": "Categorize incoming tickets",
+              "description": "Read incoming support tickets and categorize them by type, priority, and department",
+              "frequency": "hourly",
+              "hours_per_week": 10,
+              "complexity": "low",
+              "requires_judgment": false,
+              "requires_creativity": false,
+              "requires_empathy": false,
+              "data_types": ["text"],
+              "has_clear_rules": true,
+              "output_is_structured": true,
+              "error_tolerance": 0.1,
+              "current_tools": ["Zendesk", "Jira"]
+            },
+            {
+              "name": "Draft initial responses to common queries",
+              "description": "Write first-response emails for frequently asked questions and standard issues",
+              "frequency": "hourly",
+              "hours_per_week": 15,
+              "complexity": "low",
+              "requires_judgment": false,
+              "requires_creativity": false,
+              "requires_empathy": true,
+              "data_types": ["text"],
+              "has_clear_rules": true,
+              "output_is_structured": false,
+              "error_tolerance": 0.08,
+              "current_tools": ["Zendesk", "Gmail"]
+            },
+            {
+              "name": "Escalation triage and routing",
+              "description": "Assess complex tickets and route them to the appropriate specialist team",
+              "frequency": "daily",
+              "hours_per_week": 5,
+              "complexity": "high",
+              "requires_judgment": true,
+              "requires_creativity": false,
+              "requires_empathy": false,
+              "data_types": ["text", "mixed"],
+              "has_clear_rules": false,
+              "output_is_structured": true,
+              "error_tolerance": 0.02,
+              "current_tools": ["Zendesk", "Slack"]
+            }
+          ]
+        },
+        {
+          "name": "Knowledge Base Management",
+          "description": "Create and maintain help articles and internal documentation",
+          "tasks": [
+            {
+              "name": "Write help articles from resolved tickets",
+              "description": "Analyze resolved tickets and create public-facing help articles for common issues",
+              "frequency": "weekly",
+              "hours_per_week": 6,
+              "complexity": "medium",
+              "requires_judgment": true,
+              "requires_creativity": true,
+              "requires_empathy": false,
+              "data_types": ["text"],
+              "has_clear_rules": false,
+              "output_is_structured": false,
+              "error_tolerance": 0.15,
+              "current_tools": ["Confluence", "Zendesk"]
+            },
+            {
+              "name": "Generate weekly support metrics report",
+              "description": "Compile ticket volumes, response times, resolution rates, and CSAT into a weekly report",
+              "frequency": "weekly",
+              "hours_per_week": 3,
+              "complexity": "low",
+              "requires_judgment": false,
+              "requires_creativity": false,
+              "requires_empathy": false,
+              "data_types": ["numeric", "text"],
+              "has_clear_rules": true,
+              "output_is_structured": true,
+              "error_tolerance": 0.05,
+              "current_tools": ["Excel", "Zendesk"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Marketing Content Specialist",
+      "department": "Marketing",
+      "description": "Creates and manages content across digital channels including blog, social media, and email campaigns.",
+      "workflows": [
+        {
+          "name": "Content Creation Pipeline",
+          "description": "End-to-end content creation from ideation to publication",
+          "tasks": [
+            {
+              "name": "Research trending topics and keywords",
+              "description": "Analyze search trends, competitor content, and industry news to identify content opportunities",
+              "frequency": "daily",
+              "hours_per_week": 8,
+              "complexity": "medium",
+              "requires_judgment": true,
+              "requires_creativity": true,
+              "requires_empathy": false,
+              "data_types": ["text", "numeric"],
+              "has_clear_rules": false,
+              "output_is_structured": false,
+              "error_tolerance": 0.2,
+              "current_tools": ["SEMrush", "Google Trends"]
+            },
+            {
+              "name": "Write blog post first drafts",
+              "description": "Produce 1000-2000 word blog posts based on content briefs and keyword targets",
+              "frequency": "weekly",
+              "hours_per_week": 12,
+              "complexity": "medium",
+              "requires_judgment": true,
+              "requires_creativity": true,
+              "requires_empathy": false,
+              "data_types": ["text"],
+              "has_clear_rules": false,
+              "output_is_structured": false,
+              "error_tolerance": 0.25,
+              "current_tools": ["Google Docs", "WordPress"]
+            },
+            {
+              "name": "Create social media post variations",
+              "description": "Adapt blog content into multiple social media posts for different platforms (LinkedIn, X, Instagram)",
+              "frequency": "daily",
+              "hours_per_week": 6,
+              "complexity": "low",
+              "requires_judgment": false,
+              "requires_creativity": true,
+              "requires_empathy": false,
+              "data_types": ["text", "image"],
+              "has_clear_rules": true,
+              "output_is_structured": true,
+              "error_tolerance": 0.15,
+              "current_tools": ["Buffer", "Canva"]
+            },
+            {
+              "name": "Write email newsletter copy",
+              "description": "Draft weekly email newsletters with personalized sections for different audience segments",
+              "frequency": "weekly",
+              "hours_per_week": 4,
+              "complexity": "medium",
+              "requires_judgment": false,
+              "requires_creativity": true,
+              "requires_empathy": true,
+              "data_types": ["text"],
+              "has_clear_rules": true,
+              "output_is_structured": true,
+              "error_tolerance": 0.1,
+              "current_tools": ["Mailchimp", "Google Docs"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Financial Analyst",
+      "department": "Finance",
+      "description": "Performs financial analysis, reporting, and forecasting to support business decision-making.",
+      "workflows": [
+        {
+          "name": "Financial Reporting",
+          "description": "Monthly and quarterly financial reporting cycle",
+          "tasks": [
+            {
+              "name": "Consolidate data from multiple systems",
+              "description": "Extract and merge financial data from ERP, CRM, and banking systems into a unified dataset",
+              "frequency": "monthly",
+              "hours_per_week": 8,
+              "complexity": "medium",
+              "requires_judgment": false,
+              "requires_creativity": false,
+              "requires_empathy": false,
+              "data_types": ["numeric", "text"],
+              "has_clear_rules": true,
+              "output_is_structured": true,
+              "error_tolerance": 0.01,
+              "current_tools": ["Excel", "SAP", "SQL"]
+            },
+            {
+              "name": "Generate variance analysis reports",
+              "description": "Compare actuals vs budget, identify significant variances, and write explanations",
+              "frequency": "monthly",
+              "hours_per_week": 6,
+              "complexity": "high",
+              "requires_judgment": true,
+              "requires_creativity": false,
+              "requires_empathy": false,
+              "data_types": ["numeric", "text"],
+              "has_clear_rules": true,
+              "output_is_structured": true,
+              "error_tolerance": 0.02,
+              "current_tools": ["Excel", "PowerPoint"]
+            },
+            {
+              "name": "Prepare executive summary slides",
+              "description": "Create presentation slides summarizing key financial metrics and insights for leadership",
+              "frequency": "monthly",
+              "hours_per_week": 4,
+              "complexity": "medium",
+              "requires_judgment": true,
+              "requires_creativity": true,
+              "requires_empathy": false,
+              "data_types": ["numeric", "text", "image"],
+              "has_clear_rules": false,
+              "output_is_structured": true,
+              "error_tolerance": 0.05,
+              "current_tools": ["PowerPoint", "Excel"]
+            }
+          ]
+        },
+        {
+          "name": "Ad-hoc Analysis",
+          "description": "Respond to business requests for financial analysis",
+          "tasks": [
+            {
+              "name": "Build financial models for business cases",
+              "description": "Create spreadsheet models with assumptions, projections, and sensitivity analysis",
+              "frequency": "weekly",
+              "hours_per_week": 10,
+              "complexity": "high",
+              "requires_judgment": true,
+              "requires_creativity": true,
+              "requires_empathy": false,
+              "data_types": ["numeric", "code"],
+              "has_clear_rules": false,
+              "output_is_structured": true,
+              "error_tolerance": 0.02,
+              "current_tools": ["Excel", "Python"]
+            },
+            {
+              "name": "Write analysis memos and recommendations",
+              "description": "Summarize findings from financial analysis into clear written memos with actionable recommendations",
+              "frequency": "weekly",
+              "hours_per_week": 5,
+              "complexity": "high",
+              "requires_judgment": true,
+              "requires_creativity": true,
+              "requires_empathy": false,
+              "data_types": ["text"],
+              "has_clear_rules": false,
+              "output_is_structured": false,
+              "error_tolerance": 0.1,
+              "current_tools": ["Word", "Google Docs"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Software Developer",
+      "department": "Engineering",
+      "description": "Develops and maintains software applications, writes code, reviews PRs, and handles deployments.",
+      "workflows": [
+        {
+          "name": "Development Cycle",
+          "description": "Core software development workflow",
+          "tasks": [
+            {
+              "name": "Write unit and integration tests",
+              "description": "Create test cases for new features and bug fixes to ensure code quality",
+              "frequency": "daily",
+              "hours_per_week": 8,
+              "complexity": "medium",
+              "requires_judgment": true,
+              "requires_creativity": false,
+              "requires_empathy": false,
+              "data_types": ["code"],
+              "has_clear_rules": true,
+              "output_is_structured": true,
+              "error_tolerance": 0.05,
+              "current_tools": ["VS Code", "Jest", "pytest"]
+            },
+            {
+              "name": "Review pull requests",
+              "description": "Read through code changes, identify issues, suggest improvements, and approve merges",
+              "frequency": "daily",
+              "hours_per_week": 6,
+              "complexity": "high",
+              "requires_judgment": true,
+              "requires_creativity": false,
+              "requires_empathy": false,
+              "data_types": ["code", "text"],
+              "has_clear_rules": false,
+              "output_is_structured": false,
+              "error_tolerance": 0.05,
+              "current_tools": ["GitHub", "VS Code"]
+            },
+            {
+              "name": "Write technical documentation",
+              "description": "Document APIs, architecture decisions, and setup guides for the team",
+              "frequency": "weekly",
+              "hours_per_week": 4,
+              "complexity": "medium",
+              "requires_judgment": true,
+              "requires_creativity": false,
+              "requires_empathy": false,
+              "data_types": ["text", "code"],
+              "has_clear_rules": true,
+              "output_is_structured": true,
+              "error_tolerance": 0.15,
+              "current_tools": ["Confluence", "Markdown"]
+            },
+            {
+              "name": "Debug and fix production issues",
+              "description": "Investigate production errors from logs and monitoring, identify root cause, and implement fixes",
+              "frequency": "weekly",
+              "hours_per_week": 5,
+              "complexity": "high",
+              "requires_judgment": true,
+              "requires_creativity": true,
+              "requires_empathy": false,
+              "data_types": ["code", "text", "mixed"],
+              "has_clear_rules": false,
+              "output_is_structured": false,
+              "error_tolerance": 0.01,
+              "current_tools": ["Datadog", "VS Code", "Git"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

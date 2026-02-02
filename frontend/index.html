@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Use Case Analyzer</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>AI Use Case Analyzer</h1>
+      <p>Analyze job roles, workflows, and tasks to discover where generative AI can deliver the most impact.</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="input">Input &amp; Configure</button>
+      <button class="tab-btn" data-tab="results">Analysis Results</button>
+    </nav>
+
+    <!-- ── Input Tab ──────────────────────────────────────── -->
+    <section id="tab-input" class="tab-content active">
+      <div class="flex-between mb-2">
+        <h2>Define Job Roles &amp; Tasks</h2>
+        <div style="display:flex;gap:0.5rem">
+          <button class="btn btn-secondary" id="btn-load-demo">Load Demo Data</button>
+          <button class="btn btn-primary" id="btn-analyze">Run Analysis</button>
+        </div>
+      </div>
+
+      <div id="roles-container">
+        <!-- Job role cards rendered here -->
+      </div>
+      <button class="btn btn-secondary mt-2" id="btn-add-role">+ Add Job Role</button>
+    </section>
+
+    <!-- ── Results Tab ────────────────────────────────────── -->
+    <section id="tab-results" class="tab-content">
+      <div id="results-empty" class="text-center mt-3">
+        <p class="text-muted">No analysis results yet. Go to the Input tab to configure and run an analysis.</p>
+      </div>
+      <div id="results-content" class="hidden">
+        <!-- Summary stats -->
+        <div class="stats-grid" id="summary-stats"></div>
+
+        <!-- Top recommendations -->
+        <div class="card mb-2" id="top-recs-card">
+          <h3>Top Recommendations</h3>
+          <ol id="top-recs-list" style="padding-left:1.2rem;color:var(--text-secondary);font-size:0.92rem"></ol>
+        </div>
+
+        <!-- Per-role results -->
+        <div id="role-results"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Loading overlay -->
+  <div class="loading-overlay" id="loading">
+    <div class="spinner"></div>
+    <span class="loading-text">Analyzing tasks for AI opportunities...</span>
+  </div>
+
+  <script src="/static/js/api.js"></script>
+  <script src="/static/js/charts.js"></script>
+  <script src="/static/js/analyzer.js"></script>
+  <script src="/static/js/dashboard.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
