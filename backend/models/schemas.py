@@ -111,11 +111,6 @@ class JobRoleAnalysis(BaseModel):
     estimated_hours_saved_per_week: float
 
 
-class AnalysisResponse(BaseModel):
-    job_roles: list[JobRoleAnalysis]
-    summary: AnalysisSummary
-
-
 class AnalysisSummary(BaseModel):
     total_tasks_analyzed: int
     average_ai_readiness: float
@@ -123,3 +118,8 @@ class AnalysisSummary(BaseModel):
     quick_win_count: int
     estimated_total_hours_saved: float
     top_recommendations: list[str]
+
+
+class AnalysisResponse(BaseModel):
+    job_roles: list[JobRoleAnalysis]
+    summary: AnalysisSummary
